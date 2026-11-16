@@ -34,7 +34,7 @@ Summary:
 
 1. 代码生成(New node)
 
-```
+```c
 struct btjson_node * obj = btjson_new_object();
 //or
 struct btjson_node * array = btjson_new_array();	
@@ -42,7 +42,7 @@ struct btjson_node * array = btjson_new_array();
 
 2. json字符串生成(json string parse)
 
-```
+```c
 const char * jsonstr = "{  }";
 //some json string, must be "{...}", or "[...]", single value int, string like "10", "hello" is not a valid json string, will return NULL.
 struct btjson_node * root = btjson_parse(jsonstr);
@@ -51,7 +51,7 @@ struct btjson_node * root = btjson_parse(jsonstr);
 
 3. 释放(Free)
 
-```
+```c
 struct btjson_node * root = btjson_new_object();
 struct btjson_node * sub  = btjson_new_object();
 int index = btjson_add(root, "sub");
@@ -64,7 +64,7 @@ btjson_free_root(root);  //just free the root node
 
 4. 添加节点(Add node)
 
-```
+```c
 //1. if parent is object
 struct btjson_node * root = btjson_new_object();
 int index = btjson_add(root, "bool_node");
@@ -96,7 +96,7 @@ btjson_set_bool(root, index, true);
 
 5. 删除节点(Delete node)
 
-```
+```c
 //if parent is object
 btjson_del(root, "bool_node");
 //or
@@ -178,7 +178,7 @@ for(int i = 0; i < count; i++)
 
 8. tojsonstring
 
-```
+```c
 char * jsonstr = btjson_tojsonstring(root);
 //if return NULL, may be failed.
 free(jsonstr); //you must free the return value by yourself.
