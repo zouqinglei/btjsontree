@@ -10,7 +10,7 @@ A JSON API library with 1000 lines of code，simple, small, and easy to use.
 4. 使用索引方式遍历和访问子节点。
 
 ```
-rootnode->|bool|int|string|subnode(object/array)|...|double|
+rootnode-> |bool|int|string|subnode(object/array)|...|double|
                                    |
                                    V
                        |bool|...|string|sub-subnode(object/array)| 
