@@ -87,7 +87,7 @@ index = btjson_add(root, "sub_node");
 btjson_set_node(root, index, sub);
 
 
-//1. if parent is array
+//2. if parent is array
 struct btjson_node * root = btjson_new_array();
 int index = btjson_add(root, NULL);
 btjson_set_bool(root, index, true);
