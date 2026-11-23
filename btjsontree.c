@@ -215,8 +215,8 @@ static bool btjson_vector_del(struct btjson_vector * vec, int index)
         memmove((void *)vec->entrys + dst_offset, (void *)vec->entrys + offset, movesize);
     }
     
-    vec->num--;
     memset((void *)vec->entrys + vec->num * size, 0, size);
+    vec->num--;
     
     return true;
 }
